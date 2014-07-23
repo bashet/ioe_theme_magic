@@ -51,6 +51,22 @@
             </div>
             <?php } } ?>
 
+        <div class="form-group">
+            <label for="uni" class="col-sm-2 control-label">Name of the college or university</label>
+            <div class="col-sm-10">
+                <select name="uni" id="uni" class="form-control">
+                    <option value=""></option>
+                    <?php
+                    $clients = get_all_clients();
+                    if($clients){
+                        foreach($clients as $c){
+                            echo '<option value="'.$c->id.'">'.$c->name.'</option>';
+                        }
+                    }
+                    ?>
+                </select>
+            </div>
+        </div>
 
             <div class="form-group">
                 <button type="submit" value="<?php echo lang('user:register_btn') ?>" name="btnSubmit" class='btn btn-info'>{{helper:lang line="user:register_btn"}}</button>

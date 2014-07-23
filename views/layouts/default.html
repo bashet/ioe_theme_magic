@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{ theme:partial name="metadata" }}
+    <script>
+        var base_url = '<?php echo $this->config->base_url();?>';
+    </script>
+</head>
+
+<body>
+<div class="container">
+    {{ theme:partial name="header" }}
+
+    {{ if user:logged_in }}
+        {{ theme:partial name="navbar" }}
+    {{endif}}
+
+    <div class="page-content">
+        {{ if user:logged_in }}
+        {{ theme:partial name="breadcrumbs" }}
+        {{endif}}
+        <div class="row">
+            <div class="col-xs-12">
+                {{ session:messages success="alert alert-success login_msg" notice="alert" error="alert alert-error" }}
+                {{ template:body }}
+            </div>
+        </div>
+    </div>
+
+    <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+        <i class="icon-double-angle-up icon-only bigger-110"></i>
+    </a>
+
+    {{ theme:partial name="footer" }}
+
+</div>
+
+<div class="loader_window"><!-- Place at bottom of page --></div>
+</body>
+</html>
+

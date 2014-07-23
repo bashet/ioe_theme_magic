@@ -1,0 +1,44 @@
+<div class="header">
+    <div class="logo">
+        <a href="{{ url:site  }}" class="logo">
+            {{ theme:image file="logo.jpg" alt="IOE" width="200px"}}
+        </a>
+    </div>
+
+    <div class="header-right">
+
+        {{ if user:logged_in }}
+        <div class="btn-toolbar" role="toolbar" style="float: right; display: inline-block">
+            <div class="btn-group">
+                <div class="dropdown" >
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                        {{ helper:gravatar email=user:email size="16" }} {{ user:display_name }}
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                        {{ if settings:enable_profiles }}
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="{{ url:site uri='edit-profile' }}"><i class="icon-edit"></i> {{ helper:lang line="edit_profile_label" }}</a></li>
+                        {{ endif }}
+
+                        {{ if user:has_cp_permissions }}
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="{{ url:site uri='admin' }}"><i class="icon-cogs"></i> {{ helper:lang line="global:control-panel" }}</a></li>
+                        {{ endif }}
+
+                        <li role="presentation" class="divider"></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="{{ url:site uri='users/logout' }}"><i class="icon-off"></i> {{ helper:lang line="logout_label" }}</a></li>
+                    </ul>
+
+                    <button class="btn btn-default" type="button">
+                        Help
+                    </button>
+                </div>
+            </div>
+        </div>
+        {{ endif }}
+
+        <br>
+        <span style="font-size: 2em; float: right">NPQSL diagnostic: end of qualification</span>
+    </div>
+
+</div>
+

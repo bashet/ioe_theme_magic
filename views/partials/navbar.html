@@ -1,0 +1,41 @@
+<nav class="navbar navbar-default" role="navigation" id="horzMenu">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{{ url:site  }}">Home</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class=""><a href="#">Raters</a></li>
+                <li class=""><a href="#">Questions</a></li>
+                <li class=""><a href="#">Reports</a></li>
+                <li class=""><a href="#">History</a></li>
+                {{ if user:group == 'admin'}}
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Manage <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="{{ url:site }}survey/clients">Clients</a></li>
+                        <li><a href="#">User</a></li>
+                        <li><a href="#">Group</a></li>
+                        <li class="divider"></li>
+                        <li><a href="{{ url:site  }}survey/dpt">Department</a></li>
+                        <li class="divider"></li>
+                        <li><a href="{{ url:site  }}survey/question_categories">Question Category</a></li>
+                        <li><a href="{{ url:site  }}survey/default_options">Default Options</a></li>
+                        <li class="divider"></li>
+                        <li><a href="{{ url:site  }}survey">Survey</a></li>
+                    </ul>
+                </li>
+                {{ endif }}
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>

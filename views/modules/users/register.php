@@ -54,7 +54,7 @@
         <div class="form-group">
             <label for="uni" class="col-sm-2 control-label">Name of the college or university</label>
             <div class="col-sm-10">
-                <select name="uni" id="uni" class="form-control">
+                <select name="uni" id="uni" class="form-control" required="required">
                     <option value=""></option>
                     <?php
                     $clients = get_all_clients();

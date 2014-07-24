@@ -35,6 +35,9 @@
                     </ul>
                 </li>
                 {{ endif }}
+                {{ if user:group == 'manager'}}
+                <li class=""><a href="{{ url:site }}/survey/manage_users">Manage Users</a></li>
+                {{ endif }}
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->

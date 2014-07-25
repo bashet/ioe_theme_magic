@@ -17,6 +17,15 @@
         </div>
         <?php echo form_open('register', array('id' => 'register','class'=>'form-horizontal', 'role' => 'form')); ?>
 
+            <?php foreach($profile_fields as $field) { if($field['required'] and $field['field_slug'] != 'display_name') { ?>
+                <div class="form-group">
+                    <label for="<?php echo $field['field_slug']; ?>" class="col-sm-4 control-label"><?php echo (lang($field['field_name'])) ? lang($field['field_name']) : $field['field_name'];  ?></label>
+                    <div class="col-sm-8">
+                        <?php echo $field['input']; ?>
+                    </div>
+                </div>
+            <?php } } ?>
+
             <?php if ( ! Settings::get('auto_username')): ?>
                 <div class="form-group">
                     <label for="username" class="col-sm-4 control-label"><?php echo lang('user:username') ?></label>
@@ -40,17 +49,6 @@
                     <input type="password" name="password" class="form-control" maxlength="30" />
                 </div>
             </div>
-
-
-
-            <?php foreach($profile_fields as $field) { if($field['required'] and $field['field_slug'] != 'display_name') { ?>
-            <div class="form-group">
-                <label for="<?php echo $field['field_slug']; ?>" class="col-sm-4 control-label"><?php echo (lang($field['field_name'])) ? lang($field['field_name']) : $field['field_name'];  ?></label>
-                <div class="col-sm-8">
-                    <?php echo $field['input']; ?>
-                </div>
-            </div>
-            <?php } } ?>
 
             <div class="form-group">
                 <label for="programme" class="col-sm-4 control-label">Select your programme</label>

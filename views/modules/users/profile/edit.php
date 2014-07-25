@@ -94,6 +94,6 @@
 	</fieldset>
 	<?php endif; ?>
 
-	<?php echo form_submit('', lang('profile_save_btn')); ?>
+	<?php echo form_submit('', lang('profile_save_btn'), 'class="btn btn-primary btn-block"'); ?>
 	<?php echo form_close(); ?>
 </div>

@@ -13,7 +13,7 @@
 	<?php echo form_open_multipart('', array('id'=>'user_edit', 'class'=>'form-horizontal', 'role'=>'form'));?>
 
 	<fieldset id="profile_fields">
-		<legend><?php echo lang('user:details_section') ?></legend>
+		<legend>General information</legend>
         <div class="form-group">
             <label for="display_name" class="col-sm-2 control-label"><?php echo lang('profile_display_name'); ?></label>
             <div class="col-sm-10">

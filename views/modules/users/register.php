@@ -56,10 +56,10 @@
                     <select name="programme" id="programme" class="form-control" required="required">
                         <option value=""></option>
                         <?php
-                        $clients = get_all_clients();
-                        if($clients){
-                            foreach($clients as $c){
-                                echo '<option value="'.$c->id.'">'.$c->name.'</option>';
+                        $programmes = get_all_programme();
+                        if($programmes){
+                            foreach($programmes as $p){
+                                echo '<option value="'.$p->id.'">'.$p->name.'</option>';
                             }
                         }
                         ?>

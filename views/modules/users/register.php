@@ -52,22 +52,39 @@
             </div>
             <?php } } ?>
 
-        <div class="form-group">
-            <label for="uni" class="col-sm-4 control-label">Name of the college or university</label>
-            <div class="col-sm-8">
-                <select name="uni" id="uni" class="form-control" required="required">
-                    <option value=""></option>
-                    <?php
-                    $clients = get_all_clients();
-                    if($clients){
-                        foreach($clients as $c){
-                            echo '<option value="'.$c->id.'">'.$c->name.'</option>';
+            <div class="form-group">
+                <label for="programme" class="col-sm-4 control-label">Select your programme</label>
+                <div class="col-sm-8">
+                    <select name="programme" id="programme" class="form-control" required="required">
+                        <option value=""></option>
+                        <?php
+                        $clients = get_all_clients();
+                        if($clients){
+                            foreach($clients as $c){
+                                echo '<option value="'.$c->id.'">'.$c->name.'</option>';
+                            }
                         }
-                    }
-                    ?>
-                </select>
+                        ?>
+                    </select>
+                </div>
             </div>
-        </div>
+
+            <div class="form-group">
+                <label for="uni" class="col-sm-4 control-label">Name of the college or university</label>
+                <div class="col-sm-8">
+                    <select name="uni" id="uni" class="form-control" required="required">
+                        <option value=""></option>
+                        <?php
+                        $clients = get_all_clients();
+                        if($clients){
+                            foreach($clients as $c){
+                                echo '<option value="'.$c->id.'">'.$c->name.'</option>';
+                            }
+                        }
+                        ?>
+                    </select>
+                </div>
+            </div>
 
             <div class="form-group">
                 <button type="submit" value="<?php echo lang('user:register_btn') ?>" name="btnSubmit" class='btn btn-info btn-block'>{{helper:lang line="user:register_btn"}}</button>

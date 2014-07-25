@@ -21,24 +21,24 @@
             </div>
         </div>
 
-		<ul>
-			<?php foreach($profile_fields as $field): ?>
-				<?php if($field['input']): ?>
-                    <div class="form-group">
-						<label for="<?php echo $field['field_slug']; ?>" class="col-sm-2 control-label">
-							<?php echo (lang($field['field_name'])) ? lang($field['field_name']) : $field['field_name'];  ?>
-							<?php if ($field['required']) echo '<span>*</span>'; ?>
-						</label>
 
-						<?php if($field['instructions']) echo '<p class="instructions">'.$field['instructions'].'</p>'; ?>
-						
-						<div class="col-sm-10">
-							<?php echo $field['input']; ?>
-						</div>
-					</div>
-				<?php endif; ?>
-			<?php endforeach; ?>
-		</ul>
+        <?php foreach($profile_fields as $field): ?>
+            <?php if($field['input']): ?>
+                <div class="form-group">
+                    <label for="<?php echo $field['field_slug']; ?>" class="col-sm-2 control-label">
+                        <?php echo (lang($field['field_name'])) ? lang($field['field_name']) : $field['field_name'];  ?>
+                        <?php if ($field['required']) echo '<span>*</span>'; ?>
+                    </label>
+
+                    <?php if($field['instructions']) echo '<p class="instructions">'.$field['instructions'].'</p>'; ?>
+
+                    <div class="col-sm-10">
+                        <?php echo $field['input']; ?>
+                    </div>
+                </div>
+            <?php endif; ?>
+        <?php endforeach; ?>
+
 	</fieldset>
 
 	<fieldset id="user_names">

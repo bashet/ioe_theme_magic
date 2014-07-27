@@ -14,25 +14,26 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li class=""><a href="{{ url:site }}survey/evaluators">Evaluator</a></li>
-                <li class=""><a href="{{ url:site }}survey/user_survey">Questions</a></li>
-                <li class=""><a href="{{ url:site }}survey/reports">Reports</a></li>
-                <li class=""><a href="{{ url:site }}survey/history">History</a></li>
-                {{ if user:group == 'admin'}}
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Manage <span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="{{ url:site }}survey/clients">Institutes</a></li>
-                        <li><a href="{{ url:site  }}survey/programme">Programme</a></li>
-                        <li><a href="{{ url:site  }}survey/question_categories">Question Category</a></li>
-                        <!--<li><a href="{{ url:site  }}survey/default_options">Default Options</a></li>-->
-                        <li><a href="{{ url:site  }}survey">Survey</a></li>
-                    </ul>
-                </li>
-                {{ endif }}
                 {{ if user:group == 'manager' || user:group == 'admin'}}
-                <li class=""><a href="{{ url:site }}survey/manage_users">Manage Users</a></li>
+                    <li class=""><a href="{{ url:site }}survey/manage_users">Manage Users</a></li>
                 {{ endif }}
+
+                {{ if user:group == 'admin'}}
+                    <li><a href="{{ url:site }}survey/clients">Institutes</a></li>
+                    <li><a href="{{ url:site  }}survey/programme">Programme</a></li>
+                    <li><a href="{{ url:site  }}survey/question_categories">Question Category</a></li>
+                    <!--<li><a href="{{ url:site  }}survey/default_options">Default Options</a></li>-->
+                    <li><a href="{{ url:site  }}survey">Survey</a></li>
+                {{ endif }}
+
+                {{ if user:group == 'user'}}
+                    <li class=""><a href="{{ url:site }}survey/evaluators">Evaluator</a></li>
+                    <li class=""><a href="{{ url:site }}survey/user_survey">Questions</a></li>
+                    <li class=""><a href="{{ url:site }}survey/reports">Reports</a></li>
+                    <li class=""><a href="{{ url:site }}survey/history">History</a></li>
+                {{ endif }}
+
+
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->

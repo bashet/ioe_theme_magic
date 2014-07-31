@@ -11,7 +11,7 @@
         <div class="btn-toolbar" role="toolbar" style="float: right; display: inline-block">
             <div class="btn-group">
                 <div class="dropdown" >
-                    <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                    <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
                         {{ helper:gravatar email=user:email size="16" }} {{ user:display_name }}
                         <span class="caret"></span>
                     </button>
@@ -28,7 +28,7 @@
                         <li role="presentation"><a role="menuitem" tabindex="-1" href="{{ url:site uri='users/logout' }}"><i class="icon-off"></i> {{ helper:lang line="logout_label" }}</a></li>
                     </ul>
 
-                    <button class="btn btn-success" type="button">
+                    <button class="btn btn-info" type="button">
                         Help
                     </button>
                 </div>

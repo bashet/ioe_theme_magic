@@ -1161,13 +1161,13 @@ blockquote,blockquote.pull-right
     width: 100%;
 }
 #horzMenu {
-    background: #07408e;
+    background: #0095bb;
 }
 #horzMenu a{
     font-weight: bold;
 }
 #horzMenu a:hover{
-    background: #bfcce8;
+    background: #96c251;
     color: #07408e;
 }
 

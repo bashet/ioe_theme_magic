@@ -15,9 +15,9 @@
 <div class="container">
     {{ theme:partial name="header" }}
 
-    {{ if user:logged_in }}
-        {{ theme:partial name="navbar" }}
-    {{endif}}
+
+    {{ theme:partial name="navbar" }}
+
 
     <div class="page-content">
 

@@ -92,7 +92,7 @@
             </div>
 
             <div class="form-group">
-                <button type="submit" value="<?php echo lang('user:register_btn') ?>" name="btnSubmit" class='btn btn-info btn-block'>{{helper:lang line="user:register_btn"}}</button>
+                <button type="button" value="<?php echo lang('user:register_btn') ?>" name="btnSubmit" class='btn btn-info btn-block'>{{helper:lang line="user:register_btn"}}</button>
             </div>
 
         <?php echo form_close(); ?>

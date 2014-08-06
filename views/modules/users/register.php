@@ -51,7 +51,7 @@
             </div>
 
             <div class="form-group">
-                <label for="re_password" class="col-sm-4 control-label">Repeat password ?></label>
+                <label for="re_password" class="col-sm-4 control-label">Repeat password</label>
                 <div class="col-sm-8">
                     <input type="password" name="re_password" id="re_password" class="form-control" maxlength="30" />
                 </div>

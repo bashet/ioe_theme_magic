@@ -38,7 +38,7 @@
             <div class="form-group">
                 <label for="email" class="col-sm-4 control-label"><?php echo lang('global:email') ?></label>
                 <div class="col-sm-8">
-                    <input type="text" name="email" class="form-control" maxlength="30" value="<?php echo $_user->email; ?>" />
+                    <input type="text" name="email" class="form-control" id="email" maxlength="30" value="<?php echo $_user->email; ?>" />
                     <?php echo form_input('d0ntf1llth1s1n', ' ', 'class="default-form" style="display:none"'); ?>
                 </div>
             </div>
@@ -46,7 +46,14 @@
             <div class="form-group">
                 <label for="password" class="col-sm-4 control-label"><?php echo lang('global:password') ?></label>
                 <div class="col-sm-8">
-                    <input type="password" name="password" class="form-control" maxlength="30" />
+                    <input type="password" name="password" id="password" class="form-control" maxlength="30" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="re_password" class="col-sm-4 control-label">Repeat password ?></label>
+                <div class="col-sm-8">
+                    <input type="password" name="re_password" id="re_password" class="form-control" maxlength="30" />
                 </div>
             </div>
 

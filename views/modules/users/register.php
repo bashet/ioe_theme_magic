@@ -75,7 +75,7 @@
             </div>
 
             <div class="form-group">
-                <label for="uni" class="col-sm-4 control-label">Name of the college or university</label>
+                <label for="uni" class="col-sm-4 control-label">Select your organisation</label>
                 <div class="col-sm-8">
                     <select name="uni" id="uni" class="form-control" required="required">
                         <option value=""></option>
@@ -92,7 +92,7 @@
             </div>
 
             <div class="form-group">
-                <button type="button" value="<?php echo lang('user:register_btn') ?>" name="btnSubmit" class='btn btn-info btn-block'>{{helper:lang line="user:register_btn"}}</button>
+                <button type="button" id="btn_register" value="<?php echo lang('user:register_btn') ?>" name="btnSubmit" class='btn btn-info btn-block'>{{helper:lang line="user:register_btn"}}</button>
             </div>
 
         <?php echo form_close(); ?>

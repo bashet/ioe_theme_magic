@@ -2,6 +2,56 @@ $(function(){
 
     $('.login_msg').delay(1500).fadeOut('slow');
 
+    $('#btn_register').button().click(function(){
+        var password    = $('#password').val();
+        var r_pass      = $('#re_password').val();
+        var uni         = $('#uni').val();
+        var programme   = $('#programme').val();
+        var email       = $('#email').val();
+        var first_name  = $('#first_name').val();
+        var last_name   = $('#last_name').val();
+
+        if((first_name == '') || (last_name =='') || (password == '') || (r_pass == '')  || (uni == '')  || (programme == '')){
+            $('#magic_warning_msg').html('Please fill all the fields');
+            $( "#magic_warning" ).removeClass('hide').dialog({
+                resizable: false,
+                width:250,
+                modal: true,
+                title: "<div class='widget-header'><h4 class='smaller'><i class='icon-warning-sign red'></i> Warning message</h4></div>",
+                title_html: true,
+                buttons: [
+                    {
+                        html: "<i class='icon-remove bigger-110'></i>&nbsp; Close",
+                        "class" : "btn btn-xs",
+                        click: function() {
+                            $( this ).dialog( "close" );
+                        }
+                    }
+                ]
+            });
+        }else if(password != r_pass){
+            $('#magic_warning_msg').html('Password and repeat-password does not match!');
+            $( "#magic_warning" ).removeClass('hide').dialog({
+                resizable: false,
+                width:450,
+                modal: true,
+                title: "<div class='widget-header'><h4 class='smaller'><i class='icon-warning-sign red'></i> Warning message</h4></div>",
+                title_html: true,
+                buttons: [
+                    {
+                        html: "<i class='icon-remove bigger-110'></i>&nbsp; Close",
+                        "class" : "btn btn-xs",
+                        click: function() {
+                            $( this ).dialog( "close" );
+                        }
+                    }
+                ]
+            });
+        }else{
+            $('#register').submit();
+        }
+    });
+
 
     $( ".datepicker" ).datepicker({
         showOtherMonths: true,
@@ -37,65 +87,5 @@ $(function(){
         }
     }));
 
-    $( "#id-btn-dialog1" ).on('click', function(e) {
-        e.preventDefault();
-
-        var dialog = $( "#dialog-message" ).removeClass('hide').dialog({
-            modal: true,
-            title: "<div class='widget-header widget-header-small'><h4 class='smaller'><i class='icon-ok'></i> jQuery UI Dialog</h4></div>",
-            title_html: true,
-            buttons: [
-                {
-                    text: "Cancel",
-                    "class" : "btn btn-xs",
-                    click: function() {
-                        $( this ).dialog( "close" );
-                    }
-                },
-                {
-                    text: "OK",
-                    "class" : "btn btn-primary btn-xs",
-                    click: function() {
-                        $( this ).dialog( "close" );
-                    }
-                }
-            ]
-        });
-
-        /**
-         dialog.data( "uiDialog" )._title = function(title) {
-						title.html( this.options.title );
-					};
-         **/
-    });
-
-
-    $( "#id-btn-dialog2" ).on('click', function(e) {
-        e.preventDefault();
-
-        $( "#dialog-confirm" ).removeClass('hide').dialog({
-            resizable: false,
-            modal: true,
-            title: "<div class='widget-header'><h4 class='smaller'><i class='icon-warning-sign red'></i> Empty the recycle bin?</h4></div>",
-            title_html: true,
-            buttons: [
-                {
-                    html: "<i class='icon-trash bigger-110'></i>&nbsp; Delete all items",
-                    "class" : "btn btn-danger btn-xs",
-                    click: function() {
-                        $( this ).dialog( "close" );
-                    }
-                }
-                ,
-                {
-                    html: "<i class='icon-remove bigger-110'></i>&nbsp; Cancel",
-                    "class" : "btn btn-xs",
-                    click: function() {
-                        $( this ).dialog( "close" );
-                    }
-                }
-            ]
-        });
-    });
 });
 

@@ -16,7 +16,9 @@
                         <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                        {{ if user:group == 'user'}}
                         <li role="presentation"><a role="menuitem" tabindex="-1" href="{{ url:site }}survey/new_application"><i class="icon-edit"></i> Apply for new programme</a></li>
+                        {{ endif }}
                         {{ if settings:enable_profiles }}
                         <li role="presentation"><a role="menuitem" tabindex="-1" href="{{ url:site uri='edit-profile' }}"><i class="icon-edit"></i> {{ helper:lang line="edit_profile_label" }}</a></li>
                         {{ endif }}

@@ -7,33 +7,35 @@
 </div>
 <?php endif;?>
 <div class="row-fluid">
-    <div class="span6 input-form">
-        <?php if(!empty($success_string)): ?>
-                <div class="alert alert-success">
-                        <?php echo $success_string; ?>
+
+    <?php if(!empty($success_string)): ?>
+        <div class="alert alert-success">
+            <?php echo $success_string; ?>
+        </div>
+    <?php else: ?>
+
+        <?php echo form_open('users/reset_pass', array('id'=>'reset-pass', 'class'=> 'form-horizontal', 'role'=> 'form')); ?>
+
+            <h4 class="reset-instructions"><?php echo lang('user:reset_instructions'); ?></h4>
+
+            <div class="form-group">
+                <label for="email" class="col-sm-2 control-label"><?php echo lang('global:email') ?></label>
+                <div class="col-sm-10">
+                    <input type="text" name="email" id="email" maxlength="100" value="<?php echo set_value('email'); ?>" />
                 </div>
-        <?php else: ?>
+            </div>
 
-                <?php echo form_open('users/reset_pass', array('id'=>'reset-pass')); ?>
+            <div class="form-group">
+                <label for="user_name" class="col-sm-2 control-label"><?php echo lang('user:username') ?></label>
+                <div class="col-sm-10">
+                    <input type="text" name="user_name" id="user_name" maxlength="40" value="<?php echo set_value('user_name'); ?>" />
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <button type="submit" style="float: right" value="<?php echo lang('user:reset_pass_btn') ?>" name="btnSubmit" class='btn btn-info'>{{helper:lang line="user:reset_pass_btn"}}</button>
+            </div>
 
-                <h4 class="reset-instructions"><?php echo lang('user:reset_instructions'); ?></h4>
+        <?php echo form_close(); ?>
+    <?php endif; ?>
 
-                <ul>
-                        <li>
-                                <label for="email"><?php echo lang('global:email') ?></label>
-                                <input type="text" name="email" maxlength="100" value="<?php echo set_value('email'); ?>" />
-                        </li>
-                        <li>
-                                <label for="user_name"><?php echo lang('user:username') ?></label>
-                                <input type="text" name="user_name" maxlength="40" value="<?php echo set_value('user_name'); ?>" />
-                        </li>
-                        <li>
-                            
-                            <button type="submit" value="<?php echo lang('user:reset_pass_btn') ?>" name="btnSubmit" class='btn btn-info'>{{helper:lang line="user:reset_pass_btn"}}</button> 
-                        </li>
-                </ul>
-                <?php echo form_close(); ?>
-
-        <?php endif; ?>
-    </div>
 </div>

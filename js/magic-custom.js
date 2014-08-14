@@ -2,6 +2,12 @@ $(function(){
 
     $('.login_msg').delay(1500).fadeOut('slow');
 
+    $( "#faq" ).accordion({
+        collapsible: true,
+        active: false,
+        heightStyle: "content"
+    });
+
     $('#btn_register').button().click(function(){
         var password    = $('#password').val();
         var r_pass      = $('#re_password').val();

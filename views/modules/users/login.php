@@ -12,29 +12,31 @@
         <?php endif; ?>
         <div class="row-fluid">
             <?php echo form_open('users/login', array('id'=>'login-small', 'class'=> 'form-horizontal', 'role'=> 'form')); ?>
+            <div class="col-sm-4">
                 <div class="form-group">
-                    <label for="prependedInput" class="col-sm-2 control-label">Your username</label>
-                    <div class="col-sm-10">
+                    <label for="prependedInput" class="col-sm-6 control-label">Your username</label>
+                    <div class="col-sm-6">
                         <?php echo form_input('email', $this->input->post('email') ? $this->input->post('email') : '','class="span11" id="prependedInput" placeholder="'.lang('global:email').'"')?>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label for="password" class="col-sm-2 control-label">Your password: </label>
-                    <div class="col-sm-10">
+                    <label for="password" class="col-sm-6 control-label">Your password: </label>
+                    <div class="col-sm-6">
                         <input type="password" name="password" maxlength="20" class="span11" id="password" placeholder="{{helper:lang line='user:password_label'}}" />
                     </div>
                 </div>
 
                 <div class="form-group">
                     <div class="col-sm-2 control-label"></div>
-                    <div class="col-sm-10">
+                    <div class="col-sm-6">
                         <label class="checkbox">
                             <?php echo form_checkbox('remember', '1', FALSE); ?> <?php echo lang('user:remember'); ?>
                         </label>
                     </div>
                 </div>
-
+            </div>
+            <div class="col-sm-4">
                 <div class="form-group">
                     <div class="col-sm-2 control-label"></div>
                     <div class="col-sm-10">
@@ -55,6 +57,10 @@
                         <a href="<?php echo site_url('users/reset_pass');?>" class="btn btn-danger">{{helper:lang line='user:reset_password_link'}}</a>
                     </div>
                 </div>
+            </div>
+
+
+
 
             <?php echo form_close(); ?>
         </div>

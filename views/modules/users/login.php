@@ -1,4 +1,4 @@
-<h2 class="page-title" id="page_title">{{helper:lang line="user:login_header"}}</h2>
+<h2 class="page-title" id="page_title">Login to 360 Diagnostic</h2>
 
 <div class="row-fluid">
     <div  class='span6 input-form'>

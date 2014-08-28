@@ -16,6 +16,7 @@
             <ul class="nav navbar-nav">
                 {{ if user:group == 'manager' || user:group == 'admin'}}
                     <li class=""><a href="{{ url:site }}survey/manage_users">Manage Users</a></li>
+                    <li class=""><a href="{{ url:site }}survey/programme_request">Programme Request</a></li>
                 {{ endif }}
 
                 {{ if user:group == 'admin'}}

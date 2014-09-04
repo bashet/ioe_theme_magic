@@ -12,9 +12,8 @@
 </head>
 
 <body style="overflow: hidden">
-<div class="container">
+
     {{ template:body }}
-</div>
 
 </body>
 </html>

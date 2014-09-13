@@ -38,7 +38,7 @@
             <div class="form-group">
                 <label for="email" class="col-sm-4 control-label"><?php echo lang('global:email') ?></label>
                 <div class="col-sm-8">
-                    <input type="text" name="email" class="form-control" id="email" maxlength="30" value="<?php echo $_user->email; ?>" />
+                    <input type="text" name="email" class="form-control" id="email" maxlength="60" value="<?php echo $_user->email; ?>" />
                     <?php echo form_input('d0ntf1llth1s1n', ' ', 'class="default-form" style="display:none"'); ?>
                 </div>
             </div>

@@ -27,6 +27,11 @@
                         <li role="presentation"><a role="menuitem" tabindex="-1" href="{{ url:site uri='admin' }}"><i class="icon-cogs"></i> {{ helper:lang line="global:control-panel" }}</a></li>
                         {{ endif }}
 
+                        {{ if survey:old_user }}
+                        <li role="presentation" class="divider"></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="{{ url:site uri='survey/adminlogin' }}"><i class="icon-user"></i> Back to original login</a></li>
+                        {{ endif }}
+
                         <li role="presentation" class="divider"></li>
                         <li role="presentation"><a role="menuitem" tabindex="-1" href="{{ url:site uri='users/logout' }}"><i class="icon-off"></i> {{ helper:lang line="logout_label" }}</a></li>
                     </ul>

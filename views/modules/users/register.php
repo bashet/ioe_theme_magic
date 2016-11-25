@@ -58,23 +58,6 @@
             </div>
 
             <div class="form-group">
-                <label for="programme" class="col-sm-4 control-label">Select your programme</label>
-                <div class="col-sm-8">
-                    <select name="programme" id="programme" class="form-control" required="required">
-                        <option value=""></option>
-                        <?php
-                        $programmes = get_all_programme();
-                        if($programmes){
-                            foreach($programmes as $p){
-                                echo '<option value="'.$p->id.'">'.$p->name.'</option>';
-                            }
-                        }
-                        ?>
-                    </select>
-                </div>
-            </div>
-
-            <div class="form-group">
                 <label for="uni" class="col-sm-4 control-label">Select your organisation</label>
                 <div class="col-sm-8">
                     <select name="uni" id="uni" class="form-control" required="required">
@@ -84,6 +67,23 @@
                         if($clients){
                             foreach($clients as $c){
                                 echo '<option value="'.$c->id.'">'.$c->name.'</option>';
+                            }
+                        }
+                        ?>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="programme" class="col-sm-4 control-label">Select your programme</label>
+                <div class="col-sm-8">
+                    <select name="programme" id="programme" class="form-control" required="required">
+                        <option value=""></option>
+                        <?php
+                        $programmes = get_all_programme();
+                        if($programmes){
+                            foreach($programmes as $p){
+                                echo '<option value="'.$p->id.'">'.$p->name.'</option>';
                             }
                         }
                         ?>

@@ -16,23 +16,23 @@
 
         <?php echo form_open('users/reset_pass', array('id'=>'reset-pass', 'class'=> 'form-horizontal', 'role'=> 'form')); ?>
 
-            <h4 class="reset-instructions"><?php echo lang('user:reset_instructions'); ?></h4>
+            <h4 class="reset-instructions">Enter your email address</h4>
 
             <div class="form-group">
                 <label for="email" class="col-sm-2 control-label"><?php echo lang('global:email') ?></label>
-                <div class="col-sm-10">
-                    <input type="text" name="email" id="email" maxlength="100" value="<?php echo set_value('email'); ?>" />
+                <div class="col-sm-6">
+                    <input type="text" name="email" id="email" class="form-control" value="<?php echo set_value('email'); ?>" />
                 </div>
             </div>
 
-            <div class="form-group">
+            <div class="form-group hide">
                 <label for="user_name" class="col-sm-2 control-label"><?php echo lang('user:username') ?></label>
                 <div class="col-sm-10">
                     <input type="text" name="user_name" id="user_name" maxlength="40" value="<?php echo set_value('user_name'); ?>" />
                 </div>
             </div>
-            <div class="col-sm-4">
-                <button type="submit" style="float: right" value="<?php echo lang('user:reset_pass_btn') ?>" name="btnSubmit" class='btn btn-info'>{{helper:lang line="user:reset_pass_btn"}}</button>
+            <div class="col-sm-8">
+                <button type="submit" style="float: right" value="<?php echo lang('user:reset_pass_btn') ?>" name="btnSubmit" class='btn btn-info'>Submit</button>
             </div>
 
         <?php echo form_close(); ?>

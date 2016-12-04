@@ -1,16 +1,38 @@
-<h2 class="page-title" id="page_title">Login to 360 Diagnostic</h2>
+<h1 class="page-title text-primary" id="page_title">Leadership CoLab 360 Diagnostic:</h1>
 
-<div class="row-fluid">
-    <div  class='span6 input-form'>
+<div class="container-fluid">
+    <h4 class="text-primary">A Powerful tool to drive professional development in educational leadership</h4>
+    <p>
+        Leadership CoLab is a partnership between UCL Institute of Education and outstanding schools,
+        to provide exceptional leadership development for middle leaders, senior leaders and head teachers.
+        The 360 Diagnostic is a peer evaluation tool to track your leadership development.
+    </p>
+    <p>
+        This can be approached at two levels:
+    </p>
+    <h4 class="text-primary">At an organisational level</h4>
+    <p>
+        Through competencies designed by industry experts, the 360 benchmarks individuals' progress on
+        their leadership journey by gathering feedback from line managers, peers and those who you line manage.
+        The 360promots engagement at organisational level whilst encouraging the diverse talent of your staff to realise their full potential.
+    </p>
+    <h4 class="text-primary">As an individual</h4>
+    <p>
+        The 360 Diagnostic provides a unique opportunity to gain valuable insights into your leadership development.
+        This resource also provide a rare opportunity to reflect and analyse your leadership style and objectives, providing the
+        foundations for your targeted leadership development.
+    </p>
+    <br>
+    <div class="row">
+	    <?php if (validation_errors()): ?>
+            <div class="alert alert-danger alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+			    <?php echo validation_errors();?>
+            </div>
+	    <?php endif; ?>
 
+        <div class="col-md-10 col-md-offset-2">
 
-        <?php if (validation_errors()): ?>
-        <div class="alert alert-danger alert-dismissible" role="alert">
-            <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <?php echo validation_errors();?>
-        </div>
-        <?php endif; ?>
-        <div class="row-fluid">
             <?php echo form_open('users/login', array('id'=>'login-small', 'class'=> 'form-horizontal', 'role'=> 'form')); ?>
             <div class="col-sm-4">
                 <div class="form-group">
@@ -58,12 +80,17 @@
                     </div>
                 </div>
             </div>
-
-
-
-
             <?php echo form_close(); ?>
+
         </div>
     </div>
+    <div class="row">
+        <p>For further information please feel free to contact us at CoLabMoodle@ioe.ac.uk</p>
+    </div>
 </div>
+
+
+
+
+
     

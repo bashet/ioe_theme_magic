@@ -1155,7 +1155,6 @@ blockquote,blockquote.pull-right
     float: right;
 }
 .header {
-    padding-bottom: 20px;
     padding-top: 20px;
     display: inline-block;
     width: 100%;

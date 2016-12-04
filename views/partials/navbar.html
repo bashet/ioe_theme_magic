@@ -34,6 +34,34 @@
                     <li class=""><a href="{{ url:site }}survey/reports">Reports</a></li>
                     <li class=""><a href="{{ url:site }}survey/history">History</a></li>
                 {{ endif }}
+                <li class=""><a href="{{ url:site }}faq">Help</a></li>
+                {{ if user:logged_in }}
+
+                    <li class="dropdown" >
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profile<span class="caret"></span></a>
+
+                        <ul class="dropdown-menu">
+                            {{ if user:group == 'user'}}
+                            <li class=""><a href="{{ url:site }}survey/new_application"><i class="icon-edit"></i> Apply for new programme</a></li>
+                            {{ endif }}
+                            {{ if settings:enable_profiles }}
+                            <li class=""><a href="{{ url:site uri='edit-profile' }}"><i class="icon-edit"></i> {{ helper:lang line="edit_profile_label" }}</a></li>
+                            {{ endif }}
+
+                            {{ if user:has_cp_permissions }}
+                            <li class=""><a href="{{ url:site uri='admin' }}"><i class="icon-cogs"></i> {{ helper:lang line="global:control-panel" }}</a></li>
+                            {{ endif }}
+
+                            {{ if survey:old_user }}
+                            <li class="divider"></li>
+                            <li class=""><a href="{{ url:site uri='survey/adminlogin' }}"><i class="icon-user"></i> Back to original login</a></li>
+                            {{ endif }}
+
+                            <li class="divider"></li>
+                            <li><a href="{{ url:site uri='users/logout' }}"><i class="icon-off"></i> {{ helper:lang line="logout_label" }}</a></li>
+                        </ul>
+                    </li>
+                {{ endif }}
 
 
             </ul>

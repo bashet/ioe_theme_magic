@@ -15755,3 +15755,7 @@ modal element will be visible */
 body.loading .loader_window {
     display: block;
 }
+
+tr.selected {
+    background-color: lightblue;
+}

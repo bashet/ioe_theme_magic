@@ -11,9 +11,10 @@
 <div class="row-fluid">
     <div class="span6 input-form">
         <div class="alert alert-info">
-                <span id="active_step"><?php echo lang('user:register_step1') ?></span> -&gt;
-                <span><?php echo lang('user:register_step2') ?></span>
-            <span style="color: red">&nbsp;&nbsp;&nbsp;(All the fields are mandatory to fill up)</span>
+                <span id="active_step">Step 1: Submit Registration Request</span> <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            <span>Step 2: Admin Approval </span> <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            <span>Step 3: 360 Diagnostic Survey</span>
+            <span style="color: red">&nbsp;&nbsp;&nbsp;(All fields are mandatory)</span>
         </div>
         <?php echo form_open('register', array('id' => 'register','class'=>'form-horizontal', 'role' => 'form')); ?>
 
@@ -80,12 +81,12 @@
                     <select name="programme" id="programme" class="form-control" required="required">
                         <option value=""></option>
                         <?php
-                        $programmes = get_all_programme();
+                        /*$programmes = get_all_programme();
                         if($programmes){
                             foreach($programmes as $p){
                                 echo '<option value="'.$p->id.'">'.$p->name.'</option>';
                             }
-                        }
+                        }*/
                         ?>
                     </select>
                 </div>
@@ -98,3 +99,39 @@
         <?php echo form_close(); ?>
     </div>
 </div>
+
+<script type="application/javascript">
+    $(function () {
+        $('#uni').change(function () {
+            var cid = this.value;
+            var select = $('#programme');
+            if(cid != ''){
+                $.ajax({
+                    type : "POST",
+                    url : base_url + 'index.php/survey/get_client_programme',
+                    data : {client_id: cid},
+                    success: function(data,status) {
+                        if(data){
+                            var msg = jQuery.parseJSON( data );
+
+                            if(msg != ''){
+                                select.empty();
+                                select.append('<option value=""></option>');
+                                msg.forEach(function (p) {
+                                    var option = '<option value="'+ p.id +'">' + p.name +'</option>';
+                                    select.append(option);
+                                });
+
+                            }else{
+                                select.empty();
+                            }
+                        }
+                    }
+                });
+            }else{
+                select.empty();
+            }
+            
+        });
+    });
+</script>

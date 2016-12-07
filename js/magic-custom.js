@@ -18,7 +18,8 @@ $(function(){
         var last_name   = $('#last_name').val();
 
         if((first_name == '') || (last_name =='') || (password == '') || (r_pass == '')  || (uni == '')  || (programme == '')){
-            $('#magic_warning_msg').html('Please fill all the fields');
+            swal('All fields are mandatory!', '', 'warning');
+            /*$('#magic_warning_msg').html('Please fill all the fields');
             $( "#magic_warning" ).removeClass('hide').dialog({
                 resizable: false,
                 width:250,
@@ -34,9 +35,10 @@ $(function(){
                         }
                     }
                 ]
-            });
+            });*/
         }else if(password != r_pass){
-            $('#magic_warning_msg').html('Password and repeat-password does not match!');
+            swal('Password and repeat-password does not match!', '', 'warning');
+            /*$('#magic_warning_msg').html('Password and repeat-password does not match!');
             $( "#magic_warning" ).removeClass('hide').dialog({
                 resizable: false,
                 width:450,
@@ -52,7 +54,7 @@ $(function(){
                         }
                     }
                 ]
-            });
+            });*/
         }else{
             $('#register').submit();
         }

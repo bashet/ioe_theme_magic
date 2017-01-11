@@ -15,17 +15,20 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 {{ if user:group == 'manager' || user:group == 'admin'}}
-                    <li class=""><a href="{{ url:site }}survey/manage_users">Manage Users</a></li>
-                    <li class=""><a href="{{ url:site }}survey/programme_request">Programme Request</a></li>
+                    {{ if survey:manager_has_organisation }}
+                        <li class=""><a href="{{ url:site }}survey/manage_users">Manage Users</a></li>
+                        <li class=""><a href="{{ url:site }}survey/programme_request">Programme Request</a></li>
+                    {{ endif }}
                 {{ endif }}
 
                 {{ if user:group == 'admin'}}
+                    <li class=""><a href="{{ url:site }}survey/manage_users">Manage Users</a></li>
+                    <li class=""><a href="{{ url:site }}survey/programme_request">Programme Request</a></li>
                     <li><a href="{{ url:site }}survey/clients">Organisations</a></li>
                     <li><a href="{{ url:site  }}survey/programme">Programme</a></li>
                     <li><a href="{{ url:site  }}survey">Survey</a></li>
                     <li><a href="{{ url:site  }}survey/question_categories">Question Category</a></li>
                     <!--<li><a href="{{ url:site  }}survey/default_options">Default Options</a></li>-->
-
                 {{ endif }}
 
                 {{ if user:group == 'user'}}

@@ -15760,3 +15760,8 @@ body.loading .loader_window {
 tr.selected {
     background-color: lightblue;
 }
+.navbar .navbar-brand {
+    font-size: 13px;
+    padding-bottom: 0;
+    padding-top: 15px;
+}

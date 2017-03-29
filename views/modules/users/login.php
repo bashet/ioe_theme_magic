@@ -1,4 +1,4 @@
-<h1 class="page-title text-primary" id="page_title">Leadership CoLab 360 Diagnostic:</h1>
+<h1 class="page-title text-primary" id="page_title"><strong>Leadership CoLab 360 Diagnostic:</strong></h1>
 
 <div class="container-fluid">
     <h4 class="text-primary">A Powerful tool to drive professional development in educational leadership</h4>

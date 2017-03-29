@@ -1834,10 +1834,6 @@ blockquote,blockquote.pull-right
 }
 @media only screen and (max-width:991px)
 {
-    .breadcrumb
-    {
-        margin-left:90px
-    }
     .breadcrumbs.fixed,.breadcrumbs.breadcrumbs-fixed
     {
         position:relative!important;
@@ -1862,10 +1858,6 @@ blockquote,blockquote.pull-right
 }
 @media only screen and (max-width:320px)
 {
-    .breadcrumb
-    {
-        margin-left:36px
-    }
 
 }
 .container.main-container .breadcrumbs.breadcrumbs-fixed

@@ -1,7 +1,7 @@
 <h1 class="page-title text-primary" id="page_title"><strong>Leadership CoLab 360 Diagnostic:</strong></h1>
 
 <div class="container-fluid">
-    <h4 class="text-primary">A Powerful tool to drive professional development in educational leadership</h4>
+    <h4 class="text-primary"><strong>A Powerful tool to drive professional development in educational leadership</strong></h4>
     <p>
         Leadership CoLab is a partnership between UCL Institute of Education and outstanding schools,
         to provide exceptional leadership development for middle leaders, senior leaders and head teachers.
@@ -10,13 +10,13 @@
     <p>
         This can be approached at two levels:
     </p>
-    <h4 class="text-primary">At an organisational level</h4>
+    <h4 class="text-primary"><strong>At an organisational level</strong></h4>
     <p>
         Through competencies designed by industry experts, the 360 benchmarks individuals' progress on
         their leadership journey by gathering feedback from line managers, peers and those who you line manage.
         The 360promots engagement at organisational level whilst encouraging the diverse talent of your staff to realise their full potential.
     </p>
-    <h4 class="text-primary">As an individual</h4>
+    <h4 class="text-primary"><strong>As an individual</strong></h4>
     <p>
         The 360 Diagnostic provides a unique opportunity to gain valuable insights into your leadership development.
         This resource also provide a rare opportunity to reflect and analyse your leadership style and objectives, providing the

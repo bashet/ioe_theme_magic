@@ -1,6 +1,6 @@
 <h1 class="page-title text-primary" id="page_title"><strong>Leadership CoLab 360 Diagnostic:</strong></h1>
 
-<div class="container-fluid">
+<div class="">
     <h4 class="text-primary"><strong>A Powerful tool to drive professional development in educational leadership</strong></h4>
     <p>
         Leadership CoLab is a partnership between UCL Institute of Education and outstanding schools,

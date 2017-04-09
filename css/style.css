@@ -15761,3 +15761,7 @@ tr.selected {
 .table th.centered-cell, .table td.centered-cell {
     text-align: center;
 }
+
+.page-content{
+    padding: 0;
+}
